@@ -14,12 +14,9 @@ app.use(express.static('views'));
 
 app.use('/api', apiRoutes);
 
-mongoose.connect(process.env.DB_CONNECTION, { 
-    useNewUrlParser: true, 
-    useUnifiedTopology: true 
-})
-    .then(() => console.log('Connected to MongoDB'))
-    .catch(err => console.error('MongoDB connection error:', err));
+mongoose.connect(process.env.DB_CONNECTION)
+  .then(() => console.log('MongoDB connected'))
+  .catch(err => console.log(err));
 
 
 const PORT = process.env.PORT || 3000;
