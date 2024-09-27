@@ -48,7 +48,7 @@ exports.scheduleService = async (req, res) => {
 
         res.sendFile(path.join(__dirname, '../views/bookResult.html'));
    } catch (error) {
-      console.log(err)
+      console.log(error)
       res.sendFile(path.join(__dirname, '../views/bookError.html'));
    }
 } 

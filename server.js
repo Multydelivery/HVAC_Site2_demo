@@ -14,6 +14,7 @@ app.use(express.static('views'));
 
 app.use('/api', apiRoutes);
 
+
 mongoose.connect(process.env.DB_CONNECTION)
   .then(() => console.log('MongoDB connected'))
   .catch(err => console.log(err));
