@@ -26,13 +26,7 @@ exports.scheduleService = async (req, res) => {
    Sincerely, HVAC Demo site 2`;
 
    try {
-    const newAppointment = new Appointments({
-        name,
-        email,
-        phone,
-        date
-    });
-    await newAppointment.save();
+    
  
 
         transport.sendMail({
