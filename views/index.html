@@ -1,143 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <title>HVAC Company</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <title>Cooler Than You HVAC</title>
 </head>
 <body>
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Cooler Than You HVAC Company</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#services">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#forms">Schedule & Quote</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact Us</a>
-                </li>
-            </ul>
-        </div>
+      <a class="navbar-brand" href="#">Cooler Than You HVAC</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="#hero">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#why-choose-us">Why Choose Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Our Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#forms">Get a Quote</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
     </div>
-</nav>
-    <section class="bg-primary border-secondary mb-10 shadow-lg text-white text-center p-5">
-      <div class="container">
-        <h1>Welcome to Cooler Than You HVAC Company</h1>
-        <p>Your trusted solution for heating, ventilation, and air conditioning.</p>
-      </div>
-    </section>
-    <section id="services" class="p-5">
-      <div class="container">
-        <div class="row text-center g-4">
-          <div class="col-md">
-            <div class="card border-secondary mb-10 shadow-lg bg-light">
-              <div class="card-body">
-                <h3>Heating</h3>
-                <p>Our heating services include installation, repair, and maintenance of furnaces, boilers, and heat pumps.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="card border-secondary mb-10 shadow-lg bg-light">
-              <div class="card-body">
-                <h3>Ventilation</h3>
-                <p>We offer ventilation services that include ductwork installation, air quality testing, and ventilation system maintenance.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md">
-            <div class="card border-secondary mb-10 shadow-lg bg-light">
-              <div class="card-body">
-                <h3>Air Conditioning</h3>
-                <p>Our air conditioning services include installation, repair, and maintenance of central air conditioning systems, ductless mini-splits, and heat pumps.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-     
-    <section id="forms" class="bg-light p-5">
-      <div class="container">
-          <h2 class="text-center">Schedule a Service or Request a Quote</h2>
-          <div class="row mt-4">
-              <!-- Schedule Service Form -->
-              <div class="col-md-6">
-                  <h4>Schedule a Service</h4>
-                  <form class="mt-3" action="/api/schedule_service" method="POST">
-                      <div class="mb-3">
-                          <label for="name" class="form-label">Full Name</label>
-                          <input type="text" class="form-control" id="name" name="name" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="email" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="email" name="email" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="phone" class="form-label">Phone Number</label>
-                          <input type="tel" class="form-control" id="phone" name="phone" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="date" class="form-label">Select Date and Time</label>
-                          <input type="datetime-local" class="form-control" id="date" name="date" required>
-                      </div>
-                      <button type="submit" class="btn btn-outline-primary">Schedule Service</button>
-                  </form>
-              </div>
+  </nav>
 
-              <!-- Request a Quote Form -->
-              <div class="col-md-6">
-                  <h4>Request a Quote</h4>
-                  <form class="mt-3" action="/api/request_quote" method="POST">
-                      <div class="mb-3">
-                          <label for="quoteName" class="form-label">Full Name</label>
-                          <input type="text" class="form-control" id="quoteName" name="name" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="quoteEmail" class="form-label">Email</label>
-                          <input type="email" class="form-control" id="quoteEmail" name="email" required>
-                      </div>
-                      <div class="mb-3">
-                          <label for="service" class="form-label">Service Needed</label>
-                          <select class="form-control" id="service" name="service" required>
-                              <option value="" disabled selected>Select a service</option>
-                              <option value="installation">Installation</option>
-                              <option value="maintenance">Maintenance</option>
-                              <option value="repair">Repair</option>
-                              <option value="duct_cleaning">Duct Cleaning</option>
-                              <option value="emergency_service">Emergency Service</option>
-                          </select>
-                      </div>
-                      
-                      <div class="mb-3">
-                          <label for="message" class="form-label">Message</label>
-                          <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
-                      </div>
-                      <button type="submit" class="btn btn-outline-primary">Request Quote</button>
-                  </form>
-              </div>
-          </div>
-      </div>
+  <!-- Hero Section -->
+  <section id="hero" class="bg-primary text-white text-center p-5">
+    <div class="container">
+      <h1>Cooler Than You HVAC</h1>
+      <p>Your trusted partner for heating, ventilation, and air conditioning services.</p>
+      <a href="#forms" class="btn btn-light btn-lg mt-3">Get a Free Quote</a>
+    </div>
   </section>
 
-    <footer id="contact" class="bg-dark text-white text-center p-4">
-      <div class="container">
-        <p>Cooler Than You HVAC Company | Phone: 123-456-7891 | Email: contact@coolerthanyou.com</p>
-        <p>&copy;2024 Cooler Than You HVAC Company. All Rights Reserved.</p>
+  <!-- Why Choose Us -->
+  <section id="why-choose-us" class="p-5 bg-light">
+    <div class="container text-center">
+      <h2>Why Choose Us?</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <i class="bi bi-shield-check display-4 text-primary"></i>
+          <h4>Reliable Service</h4>
+          <p>Timely and dependable HVAC solutions for your comfort and convenience.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-award display-4 text-primary"></i>
+          <h4>Certified Technicians</h4>
+          <p>Experienced, licensed, and trained professionals ready to help.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-emoji-smile display-4 text-primary"></i>
+          <h4>Customer Focused</h4>
+          <p>We prioritize customer satisfaction and guarantee quality service.</p>
+        </div>
       </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about" class="p-5">
+    <div class="container text-center">
+      <h2>About Us</h2>
+      <p>Cooler Than You HVAC is a family-owned business providing top-notch heating, ventilation, and air conditioning solutions for over a decade. We pride ourselves on excellent service and customer satisfaction.</p>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="p-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Our Services</h2>
+      <div class="row mt-4 text-center g-4">
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary">
+            <div class="card-body">
+              <h3>Heating</h3>
+              <p>Installation, maintenance, and repair of heating systems, including furnaces and heat pumps.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary">
+            <div class="card-body">
+              <h3>Ventilation</h3>
+              <p>Comprehensive solutions for better air quality and ventilation systems.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-light border-secondary">
+            <div class="card-body">
+              <h3>Air Conditioning</h3>
+              <p>Energy-efficient air conditioning installation, repair, and maintenance services.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!-- Our Projects Section -->
+<section id="projects" class="p-5">
+  <div class="container text-center">
+    <h2>Our Latest Projects</h2>
+    <div class="row mt-4">
+      <!-- Project 1 -->
+      <div class="col-md-4">
+        <div class="mb-3">
+          <i class="bi bi-house-gear-fill display-4 text-primary"></i>
+        </div>
+        <h4>Residential HVAC Installation</h4>
+        <p>Complete HVAC system upgrade for a family home, improving efficiency and comfort.</p>
+      </div>
+      <!-- Project 2 -->
+      <div class="col-md-4">
+        <div class="mb-3">
+          <i class="bi bi-building-fill-gear display-4 text-primary"></i>
+        </div>
+        <h4>Office Ventilation Upgrade</h4>
+        <p>Redesigned and optimized office ventilation for better air quality and productivity.</p>
+      </div>
+      <!-- Project 3 -->
+      <div class="col-md-4">
+        <div class="mb-3">
+          <i class="bi bi-tools display-4 text-primary"></i>
+        </div>
+        <h4>Industrial Air Quality Enhancement</h4>
+        <p>Installed advanced HVAC systems for a manufacturing plant, ensuring compliance and efficiency.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Testimonials -->
+  <section id="testimonials" class="p-5 bg-light">
+    <div class="container text-center">
+      <h2>What Our Clients Say</h2>
+      <div class="row mt-4">
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Amazing service! My HVAC system runs better than ever."</p>
+            <footer class="blockquote-footer">Emily R.</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Highly professional and reliable. I’ll definitely recommend them."</p>
+            <footer class="blockquote-footer">John T.</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4">
+          <blockquote class="blockquote">
+            <p>"Great team and excellent customer service!"</p>
+            <footer class="blockquote-footer">Sophia M.</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="p-5">
+    <div class="container text-center">
+      <h2>Frequently Asked Questions</h2>
+      <div class="accordion mt-4" id="faqAccordion">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq1">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqOne">
+              How often should I service my HVAC system?
+            </button>
+          </h2>
+          <div id="faqOne" class="accordion-collapse collapse show">
+            <div class="accordion-body">
+              At least once a year to ensure efficiency and reliability.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="faq2">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo">
+              What is the lifespan of an HVAC system?
+            </button>
+          </h2>
+          <div id="faqTwo" class="accordion-collapse collapse">
+            <div class="accordion-body">
+              On average, 10-15 years with proper maintenance.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedule & Quote -->
+  <section id="forms" class="p-5 bg-light">
+    <div class="container">
+      <h2 class="text-center">Schedule a Service or Request a Quote</h2>
+      <div class="row mt-4">
+        <div class="col-md-6">
+          <h4>Schedule a Service</h4>
+          <form>
+            <div class="mb-3"><label>Name</label><input type="text" class="form-control" required></div>
+            <div class="mb-3"><label>Email</label><input type="email" class="form-control" required></div>
+            <div class="mb-3"><label>Phone</label><input type="tel" class="form-control" required></div>
+            <div class="mb-3"><label>Date</label><input type="datetime-local" class="form-control" required></div>
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <h4>Request a Quote</h4>
+          <form>
+            <div class="mb-3"><label>Name</label><input type="text" class="form-control" required></div>
+            <div class="mb-3"><label>Email</label><input type="email" class="form-control" required></div>
+            <div class="mb-3">
+              <label>Service</label>
+              <select class="form-control" required>
+                <option disabled selected>Select Service</option>
+                <option>Heating</option>
+                <option>Ventilation</option>
+                <option>Air Conditioning</option>
+              </select>
+            </div>
+            <div class="mb-3"><label>Message</label><textarea class="form-control"></textarea></div>
+            <button class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-dark text-white text-center p-4">
+    <div class="container">
+      <p>Cooler Than You HVAC | Phone: 123-456-7890 | Email: info@coolerthanyou.com</p>
+      <p>&copy; 2024 Cooler Than You HVAC. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
